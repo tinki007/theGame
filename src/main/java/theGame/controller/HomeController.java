@@ -8,7 +8,7 @@ public class HomeController {
 
 	@RequestMapping("/")
 	public String home() {
-		return "the game is running!";
+		return "Welcome to the game:)!";
 	}
 	
 }

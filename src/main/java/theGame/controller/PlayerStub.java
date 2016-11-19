@@ -29,7 +29,7 @@ class PlayerStub {
     }
 
     static Player create(Player player) {
-        idIndex += idIndex;
+        idIndex++;
         player.setId(idIndex);
         players.put(idIndex,player);
         return player;
