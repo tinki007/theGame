@@ -1,20 +1,20 @@
 package theGame.model;
 
-import java.awt.Point;
-
 public class Player {
+
 	private Long id;
 	private String name;
 	private int attack;
 	private int movementSpeed;
 	private int health;
-	private Point position;
 	private PlayerType playerType;
+	private Point position;
+	private int score;
 	
 	public Player() {
 	}
 
-	public Player(Long id, String name, int attack, int movementSpeed, int health, Point position, PlayerType playerType) {
+	public Player(Long id, String name, int attack, int movementSpeed, int health, Point position, PlayerType playerType, int score) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -23,10 +23,19 @@ public class Player {
 		this.health = health;
 		this.position = position;
 		this.playerType = playerType;
+		this.score =score;
 	}
 
 	public Long getId() {
 		return id;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
 	}
 
 	public void setId(Long id) {
