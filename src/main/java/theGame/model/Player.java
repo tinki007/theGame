@@ -1,14 +1,26 @@
 package theGame.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "PLAYERS")
 public class Player {
 
-	private Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
 	private String name;
 	private int attack;
 	private int movementSpeed;
 	private int health;
-	private PlayerType playerType;
-	private Point position;
+    @Enumerated(EnumType.STRING)
+    private PlayerType playerType;
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name="x", column = @Column(name = "POSITION_X")),
+            @AttributeOverride(name="y", column = @Column(name = "POSITION_Y"))
+    })
+    private Point position;
 	private int score;
 	
 	public Player() {
