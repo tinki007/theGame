@@ -22,11 +22,20 @@ public class Player {
     })
     private Point position;
 	private int score;
+	private int actionPoints;
 	
 	public Player() {
 	}
 
-	public Player(Long id, String name, int attack, int movementSpeed, int health, Point position, PlayerType playerType, int score) {
+	public int getActionPoints() {
+		return actionPoints;
+	}
+
+	public void setActionPoints(int actionPoints) {
+		this.actionPoints = actionPoints;
+	}
+
+	public Player(Long id, String name, int attack, int movementSpeed, int health, Point position, PlayerType playerType, int score, int actionPoints) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -36,6 +45,7 @@ public class Player {
 		this.position = position;
 		this.playerType = playerType;
 		this.score =score;
+		this.actionPoints = actionPoints;
 	}
 
 	public Long getId() {

@@ -18,9 +18,9 @@ class PlayerStub {
 
     //populate initial list of players
     static {
-        Player fastPlayer = new Player(1L, "Dżordż", 2, 5, 10, new Point(0, 0), PlayerType.FastDude, 0);
+        Player fastPlayer = new Player(1L, "Dżordż", 2, 5, 10, new Point(0, 0), PlayerType.FastDude, 0, 10);
         players.put(1L, fastPlayer);
-        Player strongPlayer = new Player(2L, "Harry", 4, 3, 12, new Point(0,0), PlayerType.HeavyDude, 0);
+        Player strongPlayer = new Player(2L, "Harry", 4, 3, 12, new Point(0,0), PlayerType.HeavyDude, 0, 10);
         players.put(2L, strongPlayer);
     }
 
