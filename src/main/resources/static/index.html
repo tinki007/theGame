@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Game</title>
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link href="css/main.css" rel="stylesheet">
+    <script src="scripts/myJavascript.js"></script>
+</head>
+<body ng-app = "theGame">
+<div class="container">
+    <div class="row">
+        <div class="col"><img src="images/logo.png" alt = "logo"> </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <form action="" method="post">
+                 name: <input type="text" name="name" class="formElement">
+                 type: <select size="1" name="playerType" class="formElement">
+                        <option value="HeavyDude">Heavy Dude</option>
+                        <option value="FastDude">Fast Dude</option>
+                     </select>
+                <input type="submit" value="Add" class="formElement">
+            </form>
+        </div>
+        <div class="col-4" ng-controller = "firstController as ctrl">
+            Zmienna z kontrolera to: {{ctrl.someVar}}
+        </div>
+    </div>
+</div>
+</body>
