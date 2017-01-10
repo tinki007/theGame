@@ -5,7 +5,7 @@
     "use strict";
     var app = angular.module("theGame", []);
     app.controller("firstController", function() {
-       this.someVar = "wyswietl ta zmienna!";
+       this.someVar = "zmieniam jej wartoœæ!";
     });
 }());
 

@@ -1,0 +1,23 @@
+{
+  "name": "the-game",
+  "version": "1.0.0",
+  "description": "attempt of creating software game, where typical backend technologies (e.g. jpa, jdbc, db storage) are replaced with new concept of action storage ",
+  "main": "scripts/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinki007/theGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tinki007/theGame/issues"
+  },
+  "homepage": "https://github.com/tinki007/theGame#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "gulp": "^3.9.1"
+  }
+}
