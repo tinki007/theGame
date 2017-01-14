@@ -3,23 +3,14 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('default', ['serve']);
 
-gulp.task('serve', ['css'], function() {
+gulp.task('serve', function() {
 
     browserSync.init({
-        proxy: 'localhost:8080'
+        proxy: 'localhost:8080',
+        serveStatic: ['./app', './node_modules']
     });
 
-    gulp.watch('app/*.html').on('change', browserSync.reload);
-    gulp.watch('app/css/*.css', ['css']);
-
+    gulp.watch('app/**/*.html').on('change', browserSync.reload);
+    gulp.watch('app/scripts/**/*.js').on('change', browserSync.reload);
+    gulp.watch('app/css/**/*.css').on('change', browserSync.reload);
 });
-
-gulp.task('css', function(){
-    return browserSync.reload();
-
-    return gulp.src('./app/css/*.css')
-        .pipe(gulp.dest('./folderWynikowy'))
-        .pipe(browserSync.reload());
-});
-
-
