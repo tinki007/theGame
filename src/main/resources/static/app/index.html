@@ -18,27 +18,16 @@
         <div class="col-md-12"><img src="images/logo.png" alt = "logo"> </div>
     </div>
     <div class="row">
-        <div class="col-md-8">
-            <form action="" method="post">
-                 name: <input type="text" name="name" class="formElement">
-                 type: <select size="1" name="playerType" class="formElement">
-                        <option value="HeavyDude">Heavy Dude</option>
-                        <option value="FastDude">Fast Dude</option>
-                     </select>
-                <input type="submit" value="Add" class="formElement">
-            </form>
-        </div>
-        <div class="col-md-4" ng-controller = "firstController as ctrl">
-            Zmienna z kontrolera to: {{ctrl.someVar}}
-        </div>
+        <list-of-players></list-of-players>
     </div>
+
     <hr />
-    
+
     <div class="row" ng-controller="backendController as myCtrl">
         <button class="btn btn-primary btn-lg btn-success" 
                 tooltip-placement="top" uib-tooltip="Otwórz DevTools -> zakładka 'Network' :)" 
                 ng-click="myCtrl.getPlayers()">
-            Clikk me! xD
+            Clik me! xD
         </button>
         <div uib-alert ng-repeat="player in myCtrl.players" class="alert-success">
             {{player | json}}

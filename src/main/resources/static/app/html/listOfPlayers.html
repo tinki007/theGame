@@ -1,0 +1,27 @@
+<div>
+    <div ng-repeat="player in playersCtrl.players">
+        <div class="panel panel-primary">
+            <div class="panel-heading">{{player.name}} </div>
+            <div class="panel-body">
+                <h3>{{player.playerType}} class:</h3>
+                <ul>
+                    <li>Attack: {{player.attack}}</li>
+                    <li>Speed: {{player.movementSpeed}}</li>
+                    <li>Health: {{player.health}}</li>
+                    <li>Action Points: {{player.actionPoints}}</li>
+                </ul>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-6">Current Score: {{player.score}} Points</div>
+                    <div class="col-md-6" style="text-align: right">
+                        <button class="btn-danger" ng-show="!playersCtrl.id" ng-click="playersCtrl.deletePlayer(player)">
+                            Delete Dude
+                        </button>
+                        <div ng-hide="!playersCtrl.id">Player no. {{playersCtrl.id}} deleted!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
