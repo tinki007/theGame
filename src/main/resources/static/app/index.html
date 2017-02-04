@@ -11,25 +11,32 @@
     
     <link href="css/main.css" rel="stylesheet">
     <script src="scripts/app.js"></script>
+    <script src="scripts/playerDetails.js"></script>
 </head>
 <body ng-app = "theGame">
-<div class="container">
+<div class="container" ng-controller="backendController as mainCtrl">
     <div class="row">
-        <div class="col-md-12"><img src="images/logo.png" alt = "logo"> </div>
+        <div>
+            <img src="images/logo.png" alt = "logo">
+        </div>
     </div>
-    <div class="row">
-        <list-of-players></list-of-players>
+    <div class="row" ng-repeat="player in mainCtrl.players">
+        <player-details player = "player"></player-details>
     </div>
+
 
     <hr />
+    <hr />
+    <hr />
 
-    <div class="row" ng-controller="backendController as myCtrl">
+
+    <div class="row">
         <button class="btn btn-primary btn-lg btn-success" 
                 tooltip-placement="top" uib-tooltip="Otwórz DevTools -> zakładka 'Network' :)" 
-                ng-click="myCtrl.getPlayers()">
+                ng-click="mainCtrl.getPlayers()">
             Clik me! xD
         </button>
-        <div uib-alert ng-repeat="player in myCtrl.players" class="alert-success">
+        <div uib-alert ng-repeat="player in mainCtrl.players" class="alert-success">
             {{player | json}}
         </div>
     </div>

@@ -10,8 +10,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Piotrek on 17.11.2016.
+ *
+ * @deprecated Class not needed anymore! Records are stored in H2 DB right now
  */
+@Deprecated
 class PlayerStub {
     private static Map<Long, Player> players = new HashMap<Long, Player>();
     private static Long idIndex = 2L;

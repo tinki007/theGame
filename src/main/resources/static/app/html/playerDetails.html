@@ -1,0 +1,25 @@
+<div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">{{playerDetailsCtrl.player.name}} </div>
+        <div class="panel-body">
+            <h3>{{playerDetailsCtrl.player.playerType}} class:</h3>
+            <ul>
+                <li>Attack: {{playerDetailsCtrl.player.attack}}</li>
+                <li>Speed: {{playerDetailsCtrl.player.movementSpeed}}</li>
+                <li>Health: {{playerDetailsCtrl.player.health}}</li>
+                <li>Action Points: {{playerDetailsCtrl.player.actionPoints}}</li>
+            </ul>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-md-6">Current Score: {{playerDetailsCtrl.player.score}} Points</div>
+                <div class="col-md-6" style="text-align: right">
+                    <button class="btn-danger" ng-show="!playerDetailsCtrl.id" ng-click="playerDetailsCtrl.deletePlayer(playerDetailsCtrl.player)">
+                        Delete Dude
+                    </button>
+                    <div ng-hide="!playerDetailsCtrl.id">Player no. {{playerDetailsCtrl.id}} deleted!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
